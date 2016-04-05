@@ -1,1 +1,4 @@
 **/node_modules/
+*.log
+**/L02_TS/*.js
+**/L02_TS/*.js.map
