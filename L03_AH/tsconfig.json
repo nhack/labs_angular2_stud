@@ -5,7 +5,9 @@
     "removeComments": false,
     "noImplicitAny": false,
     "module": "system",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
   "exclude": [
     "node_modules"
