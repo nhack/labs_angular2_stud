@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core';
+import {ViewEncapsulation} from 'angular2/core';
 import {TabsComponent} from './tabs.component';
 import {Pizza} from './pizza';
 import {PIZZAS} from './data';
@@ -7,6 +8,7 @@ import {PIZZAS} from './data';
   selector: 'my-app',
   templateUrl: 'app/app.component.html',
   styleUrls: ['app/app.component.css'],
+  encapsulation: ViewEncapsulation.None,
   directives: [TabsComponent]
 })
 export class AppComponent {

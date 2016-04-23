@@ -60,3 +60,15 @@ textarea.form-control {
 .right{
   align-self: flex-end;
 }
+
+button.submit {
+  background-color: 75DE79;
+}
+
+button.submit:hover {
+  background: #e6e3e3;
+}
+
+.placeholder {
+  color: #b3b3b3;
+}
