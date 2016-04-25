@@ -14,29 +14,5 @@
     <h4>Extras</h4>
     <blockquote>Not yet</blockquote>
   </div>
-  <div class="reviews" *ngIf="isSelected(3)">
-    <h4>Reviews</h4>
-    <blockquote *ngFor="#review of pizza.reviews">
-      <b> Stars: {{review.stars}}</b> {{review.body}}
-      <cite>by: {{review.author}}</cite>
-    </blockquote>
-    <blockquote>
-      <b> Stars: {{newReview?.stars}}</b> {{newReview?.body}}
-      <cite>by: {{newReview?.author}}</cite>
-    </blockquote>
-    <h4>Submit a review</h4>
-    <form class="new" (ngSubmit)="onSubmit()">
-      <select class="form-control" [(ngModel)]="newReview.stars">
-        <option value="">Rate the Product</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <textarea placeholder="Write a short review for the pizza..." class="form-control" [(ngModel)]="newReview.body"></textarea>
-      <input type="email" placeholder="jimmyDean@example.org" class="form-control" [(ngModel)]="newReview.author">
-      <button type="submit" class="flat right submit">Submit Review</button>
-    </form>
-  </div>
+  <reviews *ngIf="isSelected(3)" [reviews]="pizza.reviews"></reviews>
 </div>

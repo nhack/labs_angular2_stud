@@ -1,11 +1,12 @@
 import {Component, Input} from 'angular2/core';
+import {ReviewsComponent} from './reviews.component';
 import {Pizza} from './pizza';
-import {Review} from './review';
 
 @Component({
   selector: 'tabs',
   templateUrl: 'app/tabs.component.html',
-  styleUrls: ['app/tabs.component.css']
+  styleUrls: ['app/tabs.component.css'],
+  directives: [ReviewsComponent]
 })
 export class TabsComponent {
 
@@ -13,11 +14,9 @@ export class TabsComponent {
   private pizza: Pizza;
 
   private tab: number;
-  private newReview: Review;
 
   constructor() {
     this.tab = 1;
-    this.newReview = <Review>{};
   }
 
   public selectTab(tid: number) {
@@ -26,11 +25,5 @@ export class TabsComponent {
 
   public isSelected(tid: number): boolean {
     return this.tab === tid;
-  }
-
-  public onSubmit(){
-    this.newReview.createdOn = new Date().getMilliseconds();
-    this.pizza.reviews.push(this.newReview);
-    this.newReview = <Review>{};
   }
 }

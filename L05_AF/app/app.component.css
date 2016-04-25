@@ -62,13 +62,42 @@ textarea.form-control {
 }
 
 button.submit {
-  background-color: 75DE79;
+  background-color: #75DE79;
 }
 
 button.submit:hover {
   background: #e6e3e3;
 }
 
+button.submit[disabled] {
+  background-color: #75DE79;
+  cursor: default;
+}
+
 .placeholder {
   color: #b3b3b3;
+}
+
+.ng-valid[required] {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.alert {
+  position: relative;
+  bottom: 30px;
+  left: 350px;
+  opacity: 1;
+  transition: all .3s ease .15s;
+}
+
+.alert.hide {
+  opacity: 0;
+}
+
+.error{
+  color: #a94442;
 }

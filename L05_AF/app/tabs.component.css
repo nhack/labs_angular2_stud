@@ -41,22 +41,3 @@
   border-left: 4px solid #e6e3e3;
   padding-left: 10px;
 }
-
-div.reviews .new {
-  display: flex;
-  flex-direction: column;
-  width: 330px;
-  padding-left: 40px;
-}
-
-div.reviews .new * {
-  margin-bottom: 5px;
-}
-
-button.submit {
-  background-color: 75DE79;
-}
-
-button.submit:hover {
-  background: #e6e3e3;
-}
