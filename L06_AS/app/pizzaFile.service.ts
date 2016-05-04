@@ -4,8 +4,8 @@ import {Pizza} from './pizza';
 import {PIZZAS} from './data';
 
 @Injectable()
-export class PizzaFileService{
-  getPizzas():Pizza[]{
-    return PIZZAS;
+export class PizzaFileService {
+  getPizzas():Promise<Pizza[]>{
+    return Promise.resolve(PIZZAS);
   }
 }
