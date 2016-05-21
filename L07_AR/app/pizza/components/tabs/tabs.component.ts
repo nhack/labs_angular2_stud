@@ -1,12 +1,14 @@
 import {Component, Input} from 'angular2/core';
 import {ReviewsComponent} from '../reviews/reviews.component';
+import {IngredientsComponent} from '../ingredients/ingredients.component';
+import {ExtrasComponent} from '../extras/extras.component';
 import {Pizza} from '../../domain/pizza';
 
 @Component({
   selector: 'tabs',
   templateUrl: 'app/pizza/components/tabs/tabs.component.html',
   styleUrls: ['app/pizza/components/tabs/tabs.component.css'],
-  directives: [ReviewsComponent]
+  directives: [ReviewsComponent, IngredientsComponent, ExtrasComponent]
 })
 export class TabsComponent {
 

@@ -6,13 +6,7 @@
   </ul>
 </div>
 <div class="panel">
-  <div class="ingredients" *ngIf="isSelected(1)">
-    <h4>Ingredients</h4>
-    <blockquote>{{pizza.ingredients}}</blockquote>
-  </div>
-  <div class="extras" *ngIf="isSelected(2)">
-    <h4>Extras</h4>
-    <blockquote>Not yet</blockquote>
-  </div>
+  <ingredients [ingredients]="pizza.ingredients" *ngIf="isSelected(1)"></ingredients>
+  <extras [extras]="null" *ngIf="isSelected(2)"></extras>
   <reviews *ngIf="isSelected(3)" [reviews]="pizza.reviews"></reviews>
 </div>
