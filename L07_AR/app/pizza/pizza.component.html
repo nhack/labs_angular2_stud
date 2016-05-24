@@ -1,4 +1,4 @@
-<div *ngIf="!pizza.soldOut" class="item">
+<div *ngIf="pizza && !pizza.soldOut">
   <div class="content">
     <h1> {{pizza.name}} ({{pizza.weight}}) g </h1>
     <h2> {{pizza.price | currency}}</h2>
