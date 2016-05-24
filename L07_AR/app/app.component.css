@@ -32,11 +32,6 @@ div.image img {
   width: 200px;
 }
 
-tabs {
-  width: 100%;
-  margin-right: 30px;
-}
-
 .form-control {
   display: block;
   width: 100%;
@@ -97,7 +92,10 @@ button.submit[disabled] {
 .alert.hide {
   opacity: 0;
 }
-
-.error{
+.error {
   color: #a94442;
+}
+
+.list {
+  cursor: pointer;
 }

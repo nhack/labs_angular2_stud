@@ -1,12 +1,22 @@
-import {Http, Response} from 'angular2/http';
+import {Http, Response, Headers, RequestOptions} from 'angular2/http';
 import 'rxjs/Rx';
 
 export abstract class RestService {
 
   constructor() { }
 
-  getData<T>(): Promise<T[]> {
+  getData<T>(): Promise<T> {
     return this.http.get(this.url)
+      .toPromise()
+      .then(this.extractData)
+      .catch(this.handleError);
+  }
+
+  putData<T>(body: string): Promise<T> {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+
+    return this.http.put(this.url, body, options)
       .toPromise()
       .then(this.extractData)
       .catch(this.handleError);

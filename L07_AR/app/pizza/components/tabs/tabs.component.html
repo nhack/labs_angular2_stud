@@ -8,5 +8,5 @@
 <div class="panel">
   <ingredients [ingredients]="pizza.ingredients" *ngIf="isSelected(1)"></ingredients>
   <extras [extras]="null" *ngIf="isSelected(2)"></extras>
-  <reviews *ngIf="isSelected(3)" [reviews]="pizza.reviews"></reviews>
+  <reviews *ngIf="isSelected(3)" [reviews]="pizza.reviews" (addReview)="addReview($event)"></reviews>
 </div>
