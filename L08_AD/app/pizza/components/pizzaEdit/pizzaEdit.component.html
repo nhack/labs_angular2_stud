@@ -1,0 +1,10 @@
+<h3>
+<input [(ngModel)]="pizza.name" class="form-control">
+<span>(</span>
+<input [(ngModel)]="pizza.weight" class="form-control">
+<span>) g - </span>
+<input [(ngModel)]="pizza.price" class="form-control">
+<span>USD</span>
+<button class="flat submit list" (click)="onSaved()">Save</button>
+<button class="flat list" (click)="onCanceled()">Cancel</button>
+</h3>

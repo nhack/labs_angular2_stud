@@ -2,6 +2,8 @@
   <div *ngIf="!pizza.soldOut" class="item">
     <div class="content">
       <pizza-info [pizza]="pizza.item" (click)="goToPizza(pizza.item)" *ngIf="!pizza.editing"></pizza-info>
+      <button class="flat submit list" *ngIf="!pizza.editing" (click)="pizza.editing = true">Edit</button>
+      <pizza-edit [pizza]="pizza.item" *ngIf="pizza.editing" (canceled)="onCanceled(pizza)" (saved)="onSaved(pizza, $event)"></pizza-edit>
     </div>
   </div>
 </div>
