@@ -1,0 +1,7 @@
+<div id="pizza" *ngFor='#pizza of pizzas' class='list'>
+  <div *ngIf="!pizza.soldOut" class="item">
+    <div class="content">
+      <pizza-info [pizza]="pizza.item" (click)="goToPizza(pizza.item)" *ngIf="!pizza.editing"></pizza-info>
+    </div>
+  </div>
+</div>

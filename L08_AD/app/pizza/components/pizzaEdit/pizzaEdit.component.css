@@ -1,0 +1,18 @@
+h3 {
+  display: inline-flex;
+}
+
+span {
+  display: inline-block;
+  margin-top: 6px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/*.list{
+    cursor: default;
+}*/
+
+button.list {
+  margin-top: 2px;
+}
