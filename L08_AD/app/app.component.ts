@@ -3,6 +3,8 @@ import {HTTP_PROVIDERS} from 'angular2/http';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 
 import {NavigationService} from './common/navigation.service';
+import {LOGGER_SERVICE} from './common/logger.service';
+import {logLevelConsoleFactory} from './common/consoleLogger.factory';
 import {PizzaComponent} from './pizza/pizza.component';
 import {PizzaListComponent} from './pizza/pizzaList.component';
 import {PIZZA_SERVICE} from './pizza/service/pizza.service';
@@ -15,7 +17,8 @@ import {PizzaRestService} from './pizza/service/pizzaRest.service';
   encapsulation: ViewEncapsulation.None,
   directives: [ROUTER_DIRECTIVES, PizzaListComponent],
   providers: [ROUTER_PROVIDERS, HTTP_PROVIDERS, NavigationService,
-    provide(PIZZA_SERVICE, { useClass: PizzaRestService })]
+    provide(PIZZA_SERVICE, { useClass: PizzaRestService }),
+    provide(LOGGER_SERVICE, { useFactory: logLevelConsoleFactory })]
 })
 @RouteConfig([
   {

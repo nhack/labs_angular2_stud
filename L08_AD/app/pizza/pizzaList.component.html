@@ -1,7 +1,7 @@
 <div id="pizza" *ngFor='#pizza of pizzas' class='list'>
   <div *ngIf="!pizza.soldOut" class="item">
     <div class="content">
-      <h3 (click)="goToPizza(pizza)">{{pizza.name}} ({{pizza.weight}}) g - {{pizza.price | currency}}</h3>
+      <pizza-info [pizza]="pizza.item" (click)="goToPizza(pizza.item)" *ngIf="!pizza.editing"></pizza-info>
     </div>
   </div>
 </div>
